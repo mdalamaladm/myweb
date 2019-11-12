@@ -4,12 +4,13 @@ html {
 
 body {
     position: relative;
-    bottom: 0px;
     min-height: 100%;
     background-color: black; 
     margin: 0px;
     padding: 0px;
 }
+
+
 
 /* ----------------------------------------------- */
 
@@ -22,6 +23,7 @@ body {
     right: 0px;
     width: 100%;
     z-index: 1;
+    box-shadow: 5px 0 10px white;
 }
 
 .nav {
@@ -43,8 +45,14 @@ body {
     background-color: red;
 }
 
+.nav a:first-child:hover {
+    background-color: darkred;
+    box-shadow: 0 5px 10px -6px darkred;
+}
+
 .nav a:hover {
     background-color: lightgray;
+    box-shadow: 0 5px 10px -6px lightgray;
 }
 
 
@@ -99,10 +107,82 @@ body {
 /* MAIN TAG */
 
 #main {
+    height: 100%;
     padding-top: 35px;
+    padding-bottom: 100px;
     text-align: center;
     color: white;
 }
+ 
+.pumum.anim {
+    position: absolute;
+    top: 201px;
+    left: 203px;
+    z-index: 2;
+    display: block;
+    padding: 10px;
+    animation: animpumum 0.4s ease-in 1 forwards;
+    
+}
+
+.bahasa.anim {
+    position: absolute;
+    top: 201px;
+    left: 523px;
+    z-index: 2;
+    display: block;
+    padding: 10px;
+    animation: animbahasa 0.4s ease-in 1 forwards;
+    
+}
+
+.programming.anim {
+    position: relative;
+    bottom: 201px;
+    right: 843px;
+    z-index: 2;
+    display: block;
+    padding: 10px;
+    
+    
+}
+
+/* .programming.anim:hover {
+    bottom: 201px;
+    right: 843px;
+
+} */
+
+/* .programming.mina {
+    position: absolute;
+    top: 201px;
+    left: 843px;
+    z-index: 2;
+    display: block;
+    padding: 10px;
+    animation: minaprog 0.4s ease-in 1 forwards;
+    
+} */
+/* 
+@keyframes minaprog {
+    0% {left: 150px; top: 150px;}
+    100% {left: 843px; top: 201px;}        
+}
+
+@keyframes animpumum {
+    0% {left: 203px; top: 201px;}
+    100% {left: 150px; top: 150px;}        
+}
+
+@keyframes animbahasa {
+    0% {left: 523px; top: 201px;}
+    100% {left: 150px; top: 150px;}        
+}
+
+@keyframes animprog {
+    0% {left: 843px; top: 201px;}
+    100% {left: 150px; top: 150px;}        
+} */
 
 #pumum {
     padding: 10px;
@@ -115,8 +195,13 @@ body {
     text-align: center;
 }
 
+
 #pumum2 {
     padding-top: 65px;
+}
+
+#pumum:hover {
+    box-shadow: 0 10px 10px -6px lightgoldenrodyellow;
 }
 
 #bahasa {
@@ -134,7 +219,12 @@ body {
     padding-top: 50px;
 }
 
+#bahasa:hover {
+    box-shadow: 0 10px 10px -6px lightgreen;
+}
+
 #programming {
+    position: relative;
     padding: 10px;
     color: yellow;
     background-color: transparent;
@@ -143,10 +233,15 @@ body {
     width: 300px;
     height: 300px;
     text-align: center;
+    transition: top 0.4s ease-in, left 0.4s ease-in;
 }
 
 #programming2 {
     padding-top: 40px;
+}
+
+#programming:hover {
+    box-shadow: 0 10px 10px -6px lightblue;
 }
 
 
@@ -160,8 +255,15 @@ body {
 
 }
 
-#space {
-    height: 200px;
+#specific {
+  display: none;
+  background-color: black;
+  opacity: 50%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  /* z-index: 2; */
 }
 
 /* ----------------------------------------------- */
@@ -198,15 +300,43 @@ body {
 
 /* ----------------------------------------------- */
 
+/* COMMENT TAG */
+
+#form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#name::placeholder{
+    text-align: center;
+}
+
+#comment::placeholder{
+    text-align: center;
+}
+
+
+/* ----------------------------------------------- */
+
 /* FOOTER TAG */
 
+#space {
+    height: 200px;
+}
+
 #footer {
-    width: 100%;
     background-color: white;
+    width: 100%;
     position: absolute;
     bottom: 0;
     right: 0;
     left: 0;
-    padding: 1rem;
+    padding: 10px 0 10px 0;
     text-align: center;
+    box-shadow: -3px 0 10px white;
 }
+/* 
+main:not(#bahasa) {
+    display: none;
+} */
